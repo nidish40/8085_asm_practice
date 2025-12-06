@@ -1,4 +1,4 @@
-;short c=a+b
+;short c=a&b
 
 JMP START
 
@@ -15,10 +15,7 @@ sta 1001h ;memory address of b
 lda 1000h
 mov b, a
 lda 1001h
-add b ; and operation
-sta 1002h ; moving c to memory
-mvi a, 0
-adc a; adds carry for the short data
-lda 1003h
+ana b
+sta 1002h
 
 HLT
